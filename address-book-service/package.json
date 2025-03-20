@@ -1,0 +1,53 @@
+{
+  "name": "swiftserve-address-book-apis",
+  "version": "0.0.1",
+  "description": "SwiftServe address book APIs",
+  "main": "app.js",
+  "scripts": {
+    "serve": "nodemon src/app.ts",
+    "build": "tsc",
+    "start": "tsc && node ./dist/app.js",
+    "debug": "export DEBUG=* && npm start",
+    "test": "mocha -r ts-node/register 'test/**/*.test.ts'",
+    "test-debug": "export DEBUG=* && npm test"
+  },
+  "keywords": [
+    "REST",
+    "API",
+    "ExpressJS",
+    "NodeJS",
+    "Toptal"
+  ],
+  "author": "Madhav",
+  "license": "MIT",
+  "dependencies": {
+    "@swiftserve/node-common": "file:../node-common",
+    "cors": "^2.8.5",
+    "debug": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.9.2",
+    "fast-xml-parser": "^3.19.0",
+    "helmet": "^4.4.1",
+    "moment": "^2.29.1",
+    "mongoose": "~5.*.*",
+    "shortid": "^2.2.16",
+    "unirest": "^0.6.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.7",
+    "@types/debug": "^4.1.5",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.11",
+    "@types/helmet": "^4.0.0",
+    "@types/mocha": "^8.2.0",
+    "@types/shortid": "0.0.29",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-mocha": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "nodemon": "^2.0.15",
+    "typescript": "^3.7.5"
+  }
+}

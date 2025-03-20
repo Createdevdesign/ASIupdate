@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "wlA8D5yq6pmgyUVVT79uGvQznpJBZpWrwYfszoejU/8=",
+  "Source": "clover_webhook",
+  "BasePath": "_content/clover_webhook",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

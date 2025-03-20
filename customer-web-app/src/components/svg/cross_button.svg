@@ -1,0 +1,5 @@
+<svg  className="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+    <rect width="36" height="36" rx="5" fill="#23212A"/>
+    <path d="M26 10L10 26" stroke="white" strokeWidth="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M10 10L26 26" stroke="white" strokeWidth="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

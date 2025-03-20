@@ -1,0 +1,103 @@
+<head>
+    <style>
+        p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        tr {
+            margin-bottom: 10px;
+        }
+
+        th {
+            text-align: left;
+        }
+
+            th #textcentre {
+                text-align: center !important
+            }
+
+        td {
+            width: 25%;
+        }
+
+        .template {
+            margin-left: 20%;
+            margin-right: 20%;
+            border: 1px solid;
+        }
+
+        .address {
+            margin-left: 5%;
+            margin-top: 10px;
+        }
+
+        tr.border_bottom td {
+            border-bottom: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="template">
+
+        <div class="address">
+            <b>@Model.StoreName</b>
+            <p class="contact"><small>@Model.StoreContact</small></p>
+        </div>
+        <hr />
+        <table style="width:100%">
+            <tr>
+                <td style="width:80%">
+                    <div>
+                        <div class="address">
+                            <p>Confirmation: <b>@Model.OrderNumber</b></p>
+                            <p>Order: <b>@Model.OrderNumber</b></p>
+                            <p>Received: <b>@Model.OrderDate</b></p>
+                        </div>
+                        <br />
+                        <div class="address">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th id="txtcentre">Qty</th>
+                                        <th>Description</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                @foreach(var item in @Model.OrderItems)
+                                {
+                                <tr>
+                                    <td>@item.Quantity</td>
+                                    <td><b>@item.ProductName</b></td>
+                                    <td>$@item.UnitPriceInclTax</td>
+                                </tr>
+                                }
+                                
+                                <tr>
+                                    <td style="border-top:1px solid"></td>
+                                    <td style="border-top:1px solid">Subtotal : </td>
+                                    <td style="border-top:1px solid">$@Model.SubTotal</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Tax : </td>
+                                    <td>$@Model.Tax</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-top:1px solid"></td>
+                                    <td style="border-top:1px solid">Total : </td>
+                                    <td style="border-top:1px solid">$@Model.TotalPrice</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+                <td style="width:20%"></td>
+            </tr>
+
+        </table>
+    </div>
+
+
+</body>

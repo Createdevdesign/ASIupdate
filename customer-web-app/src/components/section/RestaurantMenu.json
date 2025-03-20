@@ -1,0 +1,155 @@
+[
+{
+    "data": {
+        "_id": "5ffdfa2bb9654a859dae7f41",
+        "Name": "EGG CURRY",
+        "ShortDescription": null,
+        "FullDescription": null,
+        "Price": 10.99,
+        "CatalogPrice": 0,
+        "AvailableStartDateTimeUtc": null,
+        "AvailableEndDateTimeUtc": null,
+        "LimitedToStores": true,
+        "Stores": [
+            "5ffce6219bf28304b09046a6"
+        ],
+        "Published": true,
+        "ProductCategories": [
+            {
+                "_id": "5ffdfa2bb9654a859dae7f2f",
+                "ProductId": null,
+                "CategoryId": "5ffdfa2ab9654a859dae6be9",
+                "IsFeaturedProduct": false,
+                "DisplayOrder": 9
+            }
+        ],
+        "ProductAttributes": [
+            {
+                "_id": "5ffdfa2bb9654a859dae7f30",
+                "ProductAttributeId": "5ffdfa2ab9654a859dae6c26",
+                "Name": "Spice Level",
+                "IsRequired": false,
+                "AttributeControlTypeId": 3,
+                "DisplayOrder": 1,
+                "DefaultValue": null,
+                "ProductAttributeValues": [
+                    {
+                        "_id": "5ffdfa2bb9654a859dae7f32",
+                        "ProductAttributeMappingId": null,
+                        "ProductId": null,
+                        "AttributeValueTypeId": 0,
+                        "Name": "American Mild",
+                        "PriceAdjustment": 0,
+                        "WeightAdjustment": 0,
+                        "Cost": 0,
+                        "Quantity": 0,
+                        "IsPreSelected": false,
+                        "DisplayOrder": 0,
+                        "AttributeValueType": 0
+                    },
+                    {
+                        "_id": "5ffdfa2bb9654a859dae7f34",
+                        "ProductAttributeMappingId": null,
+                        "ProductId": null,
+                        "AttributeValueTypeId": 0,
+                        "Name": "American Medium",
+                        "PriceAdjustment": 0,
+                        "WeightAdjustment": 0,
+                        "Cost": 0,
+                        "Quantity": 0,
+                        "IsPreSelected": false,
+                        "DisplayOrder": 1,
+                        "AttributeValueType": 0
+                    },
+                    {
+                        "_id": "5ffdfa2bb9654a859dae7f36",
+                        "ProductAttributeMappingId": null,
+                        "ProductId": null,
+                        "AttributeValueTypeId": 0,
+                        "Name": "American Spicy",
+                        "PriceAdjustment": 0,
+                        "WeightAdjustment": 0,
+                        "Cost": 0,
+                        "Quantity": 0,
+                        "IsPreSelected": false,
+                        "DisplayOrder": 2,
+                        "AttributeValueType": 0
+                    },
+                    {
+                        "_id": "5ffdfa2bb9654a859dae7f38",
+                        "ProductAttributeMappingId": null,
+                        "ProductId": null,
+                        "AttributeValueTypeId": 0,
+                        "Name": "American Extra Spicy",
+                        "PriceAdjustment": 0,
+                        "WeightAdjustment": 0,
+                        "Cost": 0,
+                        "Quantity": 0,
+                        "IsPreSelected": false,
+                        "DisplayOrder": 3,
+                        "AttributeValueType": 0
+                    },
+                    {
+                        "_id": "5ffdfa2bb9654a859dae7f3a",
+                        "ProductAttributeMappingId": null,
+                        "ProductId": null,
+                        "AttributeValueTypeId": 0,
+                        "Name": "Desi Mild",
+                        "PriceAdjustment": 0,
+                        "WeightAdjustment": 0,
+                        "Cost": 0,
+                        "Quantity": 0,
+                        "IsPreSelected": false,
+                        "DisplayOrder": 4,
+                        "AttributeValueType": 0
+                    },
+                    {
+                        "_id": "5ffdfa2bb9654a859dae7f3c",
+                        "ProductAttributeMappingId": null,
+                        "ProductId": null,
+                        "AttributeValueTypeId": 0,
+                        "Name": "Desi Medium",
+                        "PriceAdjustment": 0,
+                        "WeightAdjustment": 0,
+                        "Cost": 0,
+                        "Quantity": 0,
+                        "IsPreSelected": false,
+                        "DisplayOrder": 5,
+                        "AttributeValueType": 0
+                    },
+                    {
+                        "_id": "5ffdfa2bb9654a859dae7f3e",
+                        "ProductAttributeMappingId": null,
+                        "ProductId": null,
+                        "AttributeValueTypeId": 0,
+                        "Name": "Desi Spicy",
+                        "PriceAdjustment": 0,
+                        "WeightAdjustment": 0,
+                        "Cost": 0,
+                        "Quantity": 0,
+                        "IsPreSelected": false,
+                        "DisplayOrder": 6,
+                        "AttributeValueType": 0
+                    },
+                    {
+                        "_id": "5ffdfa2bb9654a859dae7f40",
+                        "ProductAttributeMappingId": null,
+                        "ProductId": null,
+                        "AttributeValueTypeId": 0,
+                        "Name": "Desi Extra Spicy",
+                        "PriceAdjustment": 0,
+                        "WeightAdjustment": 0,
+                        "Cost": 0,
+                        "Quantity": 0,
+                        "IsPreSelected": false,
+                        "DisplayOrder": 7,
+                        "AttributeValueType": 0
+                    }
+                ]
+            }
+        ],
+        "ProductPictures": [],
+        "ProductSpecificAttribute": []
+    }
+}
+]

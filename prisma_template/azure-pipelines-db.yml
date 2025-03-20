@@ -1,0 +1,68 @@
+trigger:
+  branches:
+    include:
+      - "*"
+  paths:
+    include:
+      - user-service/prisma
+    exclude:
+      - README.md
+      - CHANGELOG.md
+      - Makefile
+
+resources:
+  repositories:
+    - repository: default
+      type: git
+      name: devops-setup
+
+variables:
+  - group: common-vars
+    
+pool:
+  vmImage: $(POOL_IMAGE)
+
+stages:
+  - stage: prod
+    condition: eq( variables['Build.SourceBranchName'], 'master' )
+    displayName: Prod
+    jobs:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: $(NODE_BUILD_VERSION)
+      displayName: Install Node.js
+    
+    - script: npm install -g prisma
+    - task: SystemsManagerGetParameter@1
+      inputs:
+        awsCredentials: $(PROD_AWS_CONN)
+        regionName: $(PROD_AWS_REGION)
+        readMode: 'hierarchy'
+        parameterPath: '/prod/swiftserve/postgres'
+        recursive: true
+    - script: prisma migrate deploy
+      env:
+        DATABASE_URL: $(/PROD/SWIFTSERVE/POSTGRES/USER-DB)
+      workingDirectory: user-service
+
+  - stage: dev
+    condition: ne( variables['Build.SourceBranchName'], 'master' )
+    displayName: Dev
+    jobs:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: $(NODE_BUILD_VERSION)
+      displayName: Install Node.js
+    
+    - script: npm install -g prisma
+    - task: SystemsManagerGetParameter@1
+      inputs:
+        awsCredentials: $(PROD_AWS_CONN)
+        regionName: $(DEV_AWS_REGION)
+        readMode: 'hierarchy'
+        parameterPath: '/dev/swiftserve/postgres'
+        recursive: true
+    - script: prisma migrate deploy
+      env:
+        DATABASE_URL: $(/dev/SWIFTSERVE/POSTGRES/USER-DB)
+      workingDirectory: user-service

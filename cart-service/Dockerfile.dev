@@ -1,0 +1,4 @@
+FROM node:14
+WORKDIR /usr/src/cart-service
+
+CMD ["npm", "run", "serve"]

@@ -1,0 +1,470 @@
+.tabs{
+    font-family:arial;
+    margin:0 auto;
+    width:70%;
+    text-align:center;
+    margin-top:15vh;
+  }
+  
+  img{
+    /* width:300px; */
+  }
+  
+  .tab-buttons{
+    /* margin-bottom:50px; */
+  }
+  
+  .buttonsTabs{
+    /* margin-right:15px; */
+    font-size:16px;
+
+    background:transparent;
+    border:none;
+    outline:none;
+    padding:0px 20px 0px 0px;
+    cursor:pointer;
+    color:rgba(0,0,0,.4);
+    transition:all ease-in-out .2s;
+    border-bottom:2px solid transparent;
+    text-align: left;
+  }
+  .active{
+    border-bottom:1px solid #5E41AA;
+   
+    color:black;
+  }
+
+  .buttonheaderData{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #23212A;
+  }
+
+  .buttonFooterData{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: #23212A;    
+    float: left;
+  }
+  .horizontalTabs> ul > .is-current{
+    text-decoration: none;
+    color: #6a40c0;
+  }
+  .horizontalTabs > ul > a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 18px;
+    color: #23212A;
+    margin-right: 20px;
+  }
+  
+  .categoryItems{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    color: #23212A;
+  }
+
+  
+  .categorySection> section{
+    box-shadow: none;
+    /* padding-left: 0px; */
+    padding: 0px;
+  }
+
+  .textDecoration{
+    text-decoration: none;
+  }
+
+  .storeTimingsbuttonsTabs{
+    /* margin-right:15px; */
+    font-size:16px;
+    transition:all ease-in-out .2s;
+    margin-right: 14px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 75px;
+    height: 75px;
+    border: 1px solid #F2F2F2;
+  }
+
+  .store-timing-tab-buttons > .active{
+    /* border-bottom:1px solid #5E41AA; */
+    font-size:16px;
+    transition:all ease-in-out .2s;
+    margin-right: 14px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 75px;
+    height: 75px;
+    background: #EFECF7;
+    border: 1px solid #5E41AA;
+  }
+
+  .storeTimeButtonFooterData{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: #23212A;    
+    background: none;
+    text-transform: uppercase;
+  }
+
+  .storeTimeButtonheaderData{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #23212A;   
+    background: none;
+  }
+
+  .store-timing-tab-buttons{
+    overflow: hidden;
+    white-space: nowrap;
+    padding-bottom: 10px;
+  }
+
+  .ModalHeader{
+    border-bottom: none;
+    border-radius: 15px;
+  }
+
+  
+  .radioButtonCss{
+    border:4px solid white;
+    box-shadow:0 0 0 1px #F2F2F2;
+    appearance:none;
+    border-radius:50%;
+    width:24px;
+    height:24px;
+    background-color:#F2F2F2;
+    transition:all ease-in 0.2s;
+  
+  }
+  .radioButtonCss:checked{
+    box-shadow:0 0 0 1px #219653;
+    background-color:#219653;
+    border:4px solid white;
+  }
+
+  .fa-angle-left::before {
+    content: "\f104";
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  /* -webkit-font-smoothing: antialiased; */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.prev::before {
+  content: " ";
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  display: block;
+}
+
+.next::before {
+  content: " ";
+  border-right: 2px solid #000;
+  border-top: 2px solid #000;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  display: block;
+}
+
+
+
+/* total width */
+.scrollCss::-webkit-scrollbar {
+  /* background-color:red; */
+  width:16px
+}
+
+/* background of the scrollbar except button or resizer */
+.scrollCss::-webkit-scrollbar-track {
+  box-shadow: none;
+}
+.scrollCss::-webkit-scrollbar-track:hover {
+  box-shadow: none;
+}
+
+/* scrollbar itself */
+.scrollCss::-webkit-scrollbar-thumb {
+  background-color:#babac0;
+  border-radius:16px;
+  border:5px solid #fff;
+}
+.scrollCss::-webkit-scrollbar-thumb:hover {
+  box-shadow: none;
+}
+
+/* set button(top and bottom of the scrollbar) */
+.scrollbar::-webkit-scrollbar-button {display:none}
+
+.dialogBoxClass{
+  border-radius: 15px;
+}
+
+.dialogBoxClass > .modal-content{
+  border: none;
+}
+
+.inventoryDetailDialogBox >.modal-content{
+  border: none;
+  background: none;
+}
+.crossButtonCss{
+  /* position: absolute; */
+  text-align: right;
+  width: 100%;
+  background: inherit;
+  top: 10px;
+  right: 10px;
+}
+
+.inventoryDetailName{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  align-items: center;
+  color: #23212A;
+}
+.inventoryDetailDescription{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #ACACAC;
+  text-align: justify;
+}
+
+/* ---------------- */
+.accordion {
+  width: 100%;
+  /* max-width: 470px; */
+}
+.panel {
+  background-color: "brown";
+}
+.panel__label {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  /* padding: 25px 60px 25px 25px; */
+  font-weight: bold;
+  font-size: 16px;
+  font-family: inherit;
+  transition: color 0.2s linear;
+  cursor: pointer;
+  color:#23212A;
+}
+.panel__label:focus {
+  outline: none;
+}
+.panel__label:after,
+.panel__label:before {
+  content: '';
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  width: 22px;
+  height: 2px;
+  margin-top: -2px;
+  background-color: "black";
+}
+.panel__label:before {
+  transform: rotate(-90deg);
+  transition: transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.panel[aria-expanded='true'] .panel__content {
+  opacity: 1;
+}
+.panel[aria-expanded='true'] .panel__label {
+  color: #957029;
+}
+.panel[aria-expanded='true'] .panel__label:before {
+  /* transform: rotate(180deg); */
+}
+.panel[aria-expanded='true'] .panel__label span {
+  transform: rotate(180deg);
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+.panel__inner {
+  overflow: hidden;
+  /* will-change: height; */
+  transition: height 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.panel__content {
+  margin: 5px 25px 25px;
+  font-size: 14px;
+  color: "gray";
+  opacity: 0;
+  transition: opacity 0.3s linear 0.18s;
+}
+.panel:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+.productAttributeValue > .cost{
+  font-style: normal;
+  /* font-weight: bold; */
+  font-size: 14px;
+  color: #23212A;
+}
+
+.productAttributeValue>.checkbox{
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.productAttributeValue input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+.productAttributeValue {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.productAttributeValue input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom checkbox */
+.productAttributeValue > .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  /* background-color: #eee; */
+  border-radius: 5px;
+  border: 1px solid rgba(94, 65, 170, 0.1);
+}
+
+/* On mouse-over, add a grey background color */
+.productAttributeValue:hover input ~ .checkmark {
+  /* background-color: #ccc; */
+  border-radius: 5px;
+  border: 1px solid rgba(94, 65, 170, 0.1);
+}
+
+/* When the checkbox is checked, add a blue background */
+.productAttributeValue input:checked ~ .checkmark {
+  background-color: #5E41AA;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.productAttributeValue input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.productAttributeValue .checkmark:after {
+  left: 10px;
+  top: 4px;
+  width: 5px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkOutButton{
+  /* float: right; */
+  background: #5E41AA;
+  border-radius: 5px;
+  width: 100%;
+  height: 45px;
+  /* font-weight: bold; */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  color: #FFFFFF;
+  /* line-height: 27px; */
+}
+.checkOutButton:hover{
+  color: #FFFFFF;
+}
+
+
+.quantity-increament-icon{
+  font-size: 19px;
+  background: rgba(94, 65, 170, 0.1);
+  color: #5E41AA;
+  border-radius: 5px !important;
+  height: 30px;
+  width: 28.31px;
+}
+
+.panelHeaderData{
+  border: 1px solid #F2F2F2;
+  padding: 10px 0px;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+}
+
+.qunatity-icon-data{
+  background: none;
+  /* font-weight: bold; */
+  /* font-size: 24px; */
+  font-size: 20px;
+  border: none !important;
+  color: #23212A;
+}
+
+.inventoryDetailDivWithoutImage{
+  padding-right: calc(1.5rem * .5);
+  padding-left: calc(1.5rem * .5);
+}
+
+
+.crossNewButtonCss{
+  position: absolute;
+  background: inherit;
+  right: 10px;
+}

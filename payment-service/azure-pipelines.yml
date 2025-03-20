@@ -1,0 +1,77 @@
+trigger:
+  branches:
+    include:
+      - "master"
+      - "develop"
+  paths:
+    include:
+      - payment-service
+      - node-common
+    exclude:
+      - README.md
+      - CHANGELOG.md
+      - Makefile
+      - payment-service/azure-pipelines.yml
+
+resources:
+  repositories:
+    - repository: default
+      type: git
+      name: devops-setup
+
+variables:
+  - group: common-vars
+    
+pool:
+  vmImage: $(POOL_IMAGE)
+
+stages:
+  - stage: prod
+    displayName: Production
+    condition: eq( variables['Build.SourceBranchName'], 'master' )
+    jobs:
+      - job: prod_build
+        displayName: Prod Build
+        steps:
+        - template: templates/step-ng-ecr-ci.yml@default
+          parameters:
+            path: payment-service
+            serviceName: payment-service
+            dockerFile: payment-service/Dockerfile
+      # - job: prod_deploy_pr
+      #   displayName: Prod PR for Deploy
+      #   dependsOn: prod_build
+      #   continueOnError: false
+      #   variables:
+      #     IMAGE_VERSION: $[ dependencies.prod_build.outputs['setImageVersion.IMAGE_VERSION'] ]
+      #   steps:
+      #   - template: templates/step-auto-pl-ci.yml@default
+      #     parameters:
+      #       repoName: infrastructure
+      #       filePath: /prod/service-payment/IMAGE
+      #       fileContent: $(IMAGE_VERSION)
+      
+  - stage: dev    
+    displayName: Development
+    condition: eq( variables['Build.SourceBranchName'], 'develop' )
+    jobs:
+      - job: dev_build
+        displayName: Dev Build
+        steps:
+        - template: templates/step-ng-ecr-ci.yml@default
+          parameters:
+            path: payment-service
+            serviceName: payment-service
+            dockerFile: payment-service/Dockerfile
+      # - job: dev_deploy_pr
+      #   displayName: Dev PR for Deploy
+      #   dependsOn: dev_build
+      #   continueOnError: false
+      #   variables:
+      #     IMAGE_VERSION: $[ dependencies.dev_build.outputs['setImageVersion.IMAGE_VERSION'] ]
+      #   steps:
+      #   - template: templates/step-auto-pl-ci.yml@default
+      #     parameters:
+      #       repoName: infrastructure
+      #       filePath: /dev/service-payment/IMAGE
+      #       fileContent: $(IMAGE_VERSION)
